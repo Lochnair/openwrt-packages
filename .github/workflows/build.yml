@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         pkg:
-          - dpinger
+          - mdns-repeater
 
     steps:
       - uses: actions/checkout@v2
@@ -35,9 +35,9 @@ jobs:
       # https://downloads.openwrt.org/releases/21.02.1/targets/lantiq/xrx200/
       - name: Setup SDK
         run: |
-          wget -q -c https://downloads.openwrt.org/releases/21.02.1/targets/lantiq/xrx200/openwrt-sdk-21.02.1-lantiq-xrx200_gcc-8.4.0_musl.Linux-x86_64.tar.xz
-          tar xf openwrt-sdk-21.02.1-lantiq-xrx200_gcc-8.4.0_musl.Linux-x86_64.tar.xz
-          ln -s openwrt-sdk-21.02.1-lantiq-xrx200_gcc-8.4.0_musl.Linux-x86_64 sdk
+          wget -q -c https://downloads.openwrt.org/releases/21.02.1/targets/octeon/generic/openwrt-sdk-21.02.1-octeon_gcc-8.4.0_musl.Linux-x86_64.tar.xz
+          tar xf openwrt-sdk-21.02.1-octeon_gcc-8.4.0_musl.Linux-x86_64.tar.xz
+          ln -s openwrt-sdk-21.02.1-octeon_gcc-8.4.0_musl.Linux-x86_64 sdk
           ls -ls
 
       - name: Run default config
