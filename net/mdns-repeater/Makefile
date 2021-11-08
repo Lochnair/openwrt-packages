@@ -5,10 +5,10 @@ PKG_VERSION:=1.9
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_PROTO:=hg
+PKG_SOURCE_PROTO:=git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_URL:=https://bitbucket.org/geekman/mdns-repeater
-PKG_SOURCE_VERSION:=28ecc2a
+PKG_SOURCE_URL:=https://github.com/kennylevinsen/mdns-repeater
+PKG_SOURCE_VERSION:=921d885
 
 PKG_LICENSE:=GPL
 
@@ -18,7 +18,7 @@ define Package/mdns-repeater
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=Multicast DNS repeater
-	URL:=https://bitbucket.org/geekman/mdns-repeater
+	URL:=https://github.com/kennylevinsen/mdns-repeater
 endef
 
 define Package/mdns-repeater/conffiles
